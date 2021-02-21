@@ -1,0 +1,35 @@
+package com.enigma.dio.shoppinglist.utils
+
+
+data class Item(
+    val date : String,
+    val name : String,
+    val quantity : Long,
+    val notes : String)
+
+object ItemList : ArrayList<Item>()
+
+
+fun addItemToList (item : Item) {
+    ItemList.add(item)
+}
+
+fun findAllItem() {
+    for (item in ItemList) {
+
+    }
+}
+
+//for initializing item list (also for testing)
+fun initItem() : ArrayList<Item> {
+    ItemList.addAll(
+        listOf(
+            Item(name = "Coffee", quantity = 3, date = "2021-02-24", notes = "High quality"),
+            Item(name = "Noodles", quantity = 5, date = "2021-02-24", notes = "" ),
+            Item(name = "Liquid Soap", quantity = 0, date = "2021-02-27", notes = "Lux"),
+            Item(name = "Honey", quantity = 11, date = "2021", notes = "Unknown purchase date"))
+    )
+    return ItemList;
+}
+
+

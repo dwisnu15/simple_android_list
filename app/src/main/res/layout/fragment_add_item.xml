@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.AddItemFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/addItemBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/add_item"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:id="@+id/formItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addItemBanner"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50sp"
+        android:minWidth="100dp"
+        android:orientation="vertical">
+
+        <!--        <DatePicker-->
+        <!--            android:id="@+id/date_picker_actions"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:datePickerMode="spinner"-->
+        <!--            android:calendarViewShown="false"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/labeldate"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/label_date"-->
+            <!--                android:textStyle="bold"/>-->
+
+            <EditText
+                android:id="@+id/inputItemDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add"
+                app:hintTextColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/labelname"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:text="@string/label_name"-->
+            <!--        android:textStyle="bold"/>-->
+
+            <EditText
+                android:id="@+id/inputItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_name"
+                app:hintTextColor="@color/black" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/labelquantity"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/label_quantity"-->
+            <!--                android:textStyle="bold"/>-->
+
+            <EditText
+                android:id="@+id/inputItemQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_quantity"
+                android:inputType="numberDecimal"
+                app:hintTextColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/labelnotes"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/label_notes"-->
+            <!--                android:textStyle="bold"/>-->
+
+            <EditText
+                android:id="@+id/inputItemNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_notes"
+                app:hintTextColor="@color/black" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/addItemButton"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="30dp"
+            android:text="ADD"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
