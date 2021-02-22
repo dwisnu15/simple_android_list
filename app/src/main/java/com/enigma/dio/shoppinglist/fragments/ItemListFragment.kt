@@ -8,33 +8,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.enigma.dio.shoppinglist.R
 import com.enigma.dio.shoppinglist.interfaces.OnNavigationListener
 import com.enigma.dio.shoppinglist.utils.Item
 import com.enigma.dio.shoppinglist.utils.ListAdapter
 import com.enigma.dio.shoppinglist.utils.initItem
+import kotlinx.android.synthetic.main.fragment_item_list.*
 
 /**
  * A simple [Fragment] subclass.
  * Use the [ItemListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ItemListFragment(val onNavigationListener: OnNavigationListener) : Fragment() {
+class ItemListFragment() : Fragment(){
 
 
-    private lateinit var itemArray: ArrayList<Item>
-    private lateinit var adapter : ListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        arguments?.let {
-//            itemArray = it.getString(ARG_PARAM1)
-//        }
-        //get list of data
-        itemArray = initItem()
-
-        //setup the array adapter so listView can be populated
-        adapter = context?.let { ListAdapter(it, itemArray) }!!
 
     }
 
@@ -43,29 +36,19 @@ class ItemListFragment(val onNavigationListener: OnNavigationListener) : Fragmen
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //provide which layout is going to be shown
-        val rootView = inflater.inflate(R.layout.fragment_item_list, container, false)
-
-        //provide which listview is going to be populated
-        val listView = rootView.findViewById(R.id.list_item) as ListView
-
-        //set listView adapter
-        listView.adapter = adapter
-
-        return rootView
+        return inflater.inflate(R.layout.fragment_item_list, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
 
     companion object {
         @JvmStatic
-        fun newInstance(onNavigationListener: OnNavigationListener) =
-            ItemListFragment(onNavigationListener).apply {
-                arguments = Bundle().apply {
-
-                }
-            }
+        fun newInstance() =
+            ItemListFragment()
     }
 
-    private fun getAllItem() {
-
-    }
 }

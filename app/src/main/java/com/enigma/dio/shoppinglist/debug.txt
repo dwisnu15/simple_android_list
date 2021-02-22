@@ -1,0 +1,16 @@
+
+D/ColorViewRootUtil: updateScreenSize, mScreenHeight 2400,mScreenWidth:1080,height:2400,width:1080
+D/WindowManager: Add to mViews: com.color.internal.widget.ColorToastLayout{17a9bc3 V.E...... ......I. 0,0-0,0 #c0204f9 oppo:id/color_toast_layout}, this = android.view.WindowManagerGlobal@b32791b,pkg= com.enigma.dio.shoppinglist
+D/ViewRootImpl[Toast]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+I/InputTransport: Create ARC handle: 0x79a5d7a440
+D/Surface: Surface::connect(this=0x79a5169000,api=1)
+D/mali_winsys: EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+D/Surface: Surface::setBufferCount(this=0x79a5169000,bufferCount=4)
+D/Surface: Surface::allocateBuffers(this=0x79a5169000)
+I/Choreographer: Skipped 2 frames!  The application may be doing too much work on its main thread.
+D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+D/ColorViewRootUtil: updateScreenSize, mScreenHeight 2400,mScreenWidth:1080,height:2400,width:1080
+D/Surface: Surface::disconnect(this=0x79a5169000,api=1)
+D/View: [Warning] assignParent to null: this = com.color.internal.widget.ColorToastLayout{17a9bc3 V.E...... ......ID 0,0-573,105 #c0204f9 oppo:id/color_toast_layout}
+I/InputTransport: Destroy ARC handle: 0x79a5d7a440
+I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.

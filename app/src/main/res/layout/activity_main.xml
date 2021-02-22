@@ -1,59 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/scrollContainer"
-        android:layout_width="match_parent"
-        android:minWidth="100dp"
-        android:layout_height="600dp"
-        android:minHeight="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-        <FrameLayout
-            android:id="@+id/fragmentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gv_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gh_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="146dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/scrollContainer"
-        android:orientation="horizontal"
-        >
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/createItemButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="@color/purple_500"
-            android:layout_marginStart="50sp"
-            android:src="@drawable/ic_baseline_add_24"
-            android:contentDescription="Add a new Item"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/listItemButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/ic_baseline_format_list_bulleted_24"
-            android:backgroundTint="@color/purple_500"
-            app:layout_constraintStart_toEndOf="@id/createItemButton"
-            android:contentDescription="Show list of item"
-            android:layout_marginStart="160sp"
-            android:layout_marginEnd="50sp"
-            />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_shopping">
+
+        </androidx.fragment.app.FragmentContainerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="4"
+            >
+
+            <ImageButton
+                android:id="@+id/navAddBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_add_24"
+                android:background="@color/black"
+                />
+
+            <ImageButton
+                android:id="@+id/navListBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_format_list_bulleted_24"
+                android:background="@color/black"
+                />
+
+            <ImageButton
+                android:id="@+id/navAccountBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_account_box_24"
+                android:background="@color/black"
+                />
+
+            <ImageButton
+                android:id="@+id/navHistoryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_history_24"
+                android:background="@color/black"
+                />
+        </LinearLayout>
 
     </LinearLayout>
 
