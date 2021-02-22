@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import com.enigma.dio.shoppinglist.fragments.AddItemFragment
 import com.enigma.dio.shoppinglist.fragments.ItemListFragment
 import com.enigma.dio.shoppinglist.interfaces.OnNavigationListener
+import com.enigma.dio.shoppinglist.utils.Item
+import com.enigma.dio.shoppinglist.utils.ItemList
 import com.enigma.dio.shoppinglist.utils.itemNav
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -60,6 +62,10 @@ class MainActivity : AppCompatActivity(), OnNavigationListener {
         //get data class of added item, how?
 
         switchFragment(listFragment)
+    }
+
+    override fun addItem(item : Item) {
+        ItemList.add(item)
     }
 
     override fun onExit() {

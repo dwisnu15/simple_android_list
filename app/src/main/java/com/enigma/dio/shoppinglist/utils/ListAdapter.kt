@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import com.enigma.dio.shoppinglist.R
 
-class ListAdapter(context: Context, private var items: ArrayList<Item>) :
+class ListAdapter(context: Context, private var items: MutableList<Item>) :
     ArrayAdapter<Item>(context, R.layout.fragment_item_list, items) {
 
     private val inflater: LayoutInflater =
@@ -32,7 +32,7 @@ class ListAdapter(context: Context, private var items: ArrayList<Item>) :
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val itemView : View
         if (convertView == null) {
-            itemView = inflater.inflate(R.layout.fragment_item_list, parent)
+            itemView = inflater.inflate(R.layout.item_list, parent, false)
         }
         else {
             itemView = convertView

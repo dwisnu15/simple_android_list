@@ -1,27 +1,19 @@
 package com.enigma.dio.shoppinglist.utils
 
 
-data class Item(
-    val date : String,
-    val name : String,
-    val quantity : Long,
-    val notes : String)
 
-object ItemList : ArrayList<Item>()
+//object ItemList : ArrayList<Item>()
+var ItemList = mutableListOf<Item>()
+//val ItemList : mutableListOf
 
+const val ADD_ITEM = "ADD_ITEM"
 
 fun addItemToList (item : Item) {
     ItemList.add(item)
 }
 
-fun findAllItem() {
-    for (item in ItemList) {
-
-    }
-}
-
 //for initializing item list (also for testing)
-fun initItem() : ArrayList<Item> {
+fun initItem() : MutableList<Item> {
     ItemList.addAll(
         listOf(
             Item(name = "Coffee", quantity = 3, date = "2021-02-24", notes = "High quality"),
