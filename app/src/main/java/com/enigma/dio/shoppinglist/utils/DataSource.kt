@@ -21,7 +21,7 @@ fun findAllItem() {
 }
 
 //for initializing item list (also for testing)
-fun initItem() : ArrayList<Item> {
+fun initItemList() : ArrayList<Item> {
     ItemList.addAll(
         listOf(
             Item(name = "Coffee", quantity = 3, date = "2021-02-24", notes = "High quality"),

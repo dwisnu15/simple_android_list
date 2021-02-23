@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_shopping"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/navHub">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/itemListFragment"
@@ -48,5 +48,16 @@
             android:id="@+id/action_navHub_to_historyFragment"
             app:destination="@id/historyFragment" />
     </fragment>
-    <action android:id="@+id/action_global_navHub" app:destination="@id/navHub" /><action android:id="@+id/action_global_itemListFragment" app:destination="@id/itemListFragment"/><action android:id="@+id/action_global_addItemFragment" app:destination="@id/addItemFragment"/><action android:id="@+id/action_global_accountFragment" app:destination="@id/accountFragment"/><action android:id="@+id/action_global_historyFragment" app:destination="@id/historyFragment"/>
+    <action android:id="@+id/action_global_itemListFragment" app:destination="@id/itemListFragment"/><action android:id="@+id/action_global_addItemFragment" app:destination="@id/addItemFragment"/><action android:id="@+id/action_global_accountFragment" app:destination="@id/accountFragment"/><action android:id="@+id/action_global_historyFragment" app:destination="@id/historyFragment"/>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.enigma.dio.shoppinglist.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_navHub"
+            app:destination="@id/navHub" />
+    </fragment>
+
+    <action android:id="@+id/action_global_splashFragment" app:destination="@id/splashFragment" />
 </navigation>

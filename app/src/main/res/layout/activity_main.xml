@@ -41,52 +41,20 @@
 
         </androidx.fragment.app.FragmentContainerView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:weightSum="4"
-            >
 
-            <ImageButton
-                android:id="@+id/navAddBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/ic_baseline_add_24"
-                android:background="@color/black"
-                />
-
-            <ImageButton
-                android:id="@+id/navListBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/ic_baseline_format_list_bulleted_24"
-                android:background="@color/black"
-                />
-
-            <ImageButton
-                android:id="@+id/navAccountBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/ic_baseline_account_box_24"
-                android:background="@color/black"
-                />
-
-            <ImageButton
-                android:id="@+id/navHistoryBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/ic_baseline_history_24"
-                android:background="@color/black"
-                />
-        </LinearLayout>
 
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
